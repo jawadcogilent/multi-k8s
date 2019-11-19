@@ -10,8 +10,6 @@ docker push jawadcogilent/multi-worker
 
 kubectl apply -f k8s
 #kubectl set image deployments/server-deployment server=jawadcogilent/multi-server
-kubectl rollout restart deployment server-deployment
-kubectl rollout restart deployment client-deployment
-kubectl rollout restart deployment worker-deployment
-
-
+kubectl rollout restart deployment deployment/server-deployment
+kubectl rollout restart deployment deployment/client-deployment
+kubectl rollout restart deployment deployment/worker-deployment
