@@ -14,9 +14,9 @@ docker push jawadcogilent/multi-worker:$SHA
 
 kubectl apply -f k8s
 
-kubectl set image deployments/client-deployment server=jawadcogilent/multi-client:$SHA
+kubectl set image deployments/client-deployment client=jawadcogilent/multi-client:$SHA
 kubectl set image deployments/server-deployment server=jawadcogilent/multi-server:$SHA
-kubectl set image deployments/worker-deployment server=jawadcogilent/multi-worker:$SHA
+kubectl set image deployments/worker-deployment worker=jawadcogilent/multi-worker:$SHA
 
 ## Uncomment the below lines only if you use kubectl version 1.16 or above
 #kubectl rollout restart deployment deployment/server-deployment
